@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B7q-rz-oZ8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="pYh-QM-IK8">
+            <objects>
+                <tableViewController id="B7q-rz-oZ8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iKe-eh-j7p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QNW-Pu-rqt">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QNW-Pu-rqt" id="mwD-c4-dvp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="name" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJh-Sj-EZN" userLabel="name">
+                                            <rect key="frame" x="57" y="-1" width="310" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="howScary" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6m-P3-3QG">
+                                            <rect key="frame" x="58" y="18" width="309" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageName" image="ladybug" translatesAutoresizingMaskIntoConstraints="NO" id="pVj-Cj-P6g">
+                                            <rect key="frame" x="8" y="0.0" width="38" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="38" id="vlx-s9-rGP"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="g6m-P3-3QG" firstAttribute="top" secondItem="mwD-c4-dvp" secondAttribute="top" constant="18" id="3nE-KV-Bay"/>
+                                        <constraint firstItem="pVj-Cj-P6g" firstAttribute="top" secondItem="mwD-c4-dvp" secondAttribute="top" id="6De-oB-NiY"/>
+                                        <constraint firstAttribute="bottom" secondItem="qJh-Sj-EZN" secondAttribute="bottom" constant="23.5" id="Fsl-Lm-6zY"/>
+                                        <constraint firstItem="g6m-P3-3QG" firstAttribute="leading" secondItem="pVj-Cj-P6g" secondAttribute="trailing" constant="12" id="NHj-sx-Pb6"/>
+                                        <constraint firstAttribute="bottom" secondItem="g6m-P3-3QG" secondAttribute="bottom" constant="4.5" id="NNg-eg-eor"/>
+                                        <constraint firstAttribute="trailing" secondItem="g6m-P3-3QG" secondAttribute="trailing" constant="8" id="VWh-1w-lkg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pVj-Cj-P6g" secondAttribute="bottom" constant="-1.5" id="gMl-aa-gtA"/>
+                                        <constraint firstAttribute="trailing" secondItem="qJh-Sj-EZN" secondAttribute="trailing" constant="8" id="jKK-rs-NBC"/>
+                                        <constraint firstItem="pVj-Cj-P6g" firstAttribute="leading" secondItem="mwD-c4-dvp" secondAttribute="leadingMargin" id="pGd-43-T46"/>
+                                        <constraint firstItem="qJh-Sj-EZN" firstAttribute="leading" secondItem="pVj-Cj-P6g" secondAttribute="trailing" constant="11" id="w6i-Iv-w2p"/>
+                                        <constraint firstItem="qJh-Sj-EZN" firstAttribute="top" secondItem="mwD-c4-dvp" secondAttribute="top" constant="-1" id="xnC-75-paL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B7q-rz-oZ8" id="bFi-Rg-IB0"/>
+                            <outlet property="delegate" destination="B7q-rz-oZ8" id="dYA-G8-V6L"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tju-4t-egb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="-398"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ladybug" width="320" height="320"/>
+    </resources>
+</document>
