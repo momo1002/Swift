@@ -11,11 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     // MARK: - Table view data source
@@ -29,6 +26,7 @@ class TableViewController: UITableViewController {
         "Quite cute!!",
         "Super cute!"
     ]
+    let imageRate = "RateStar.png"
 
     // -------------------------------------------------------
     
@@ -59,6 +57,7 @@ class TableViewController: UITableViewController {
         cell.myImageView.image = UIImage(named: imageNames[indexPath.row])
         cell.myTitleLabel.text = imageTitles[indexPath.row]
         cell.myDescriptionLabel.text = imageDescriptions[indexPath.row]
+        cell.myRateStar.image = UIImage(named: imageRate)
         
         //4. Return the cell
         return cell

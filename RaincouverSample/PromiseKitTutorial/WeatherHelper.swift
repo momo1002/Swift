@@ -54,7 +54,7 @@ class WeatherHelper {
   
   func getWeatherTheOldFashionedWay(latitude: Double, longitude: Double, completion: @escaping (Weather?, Error?) -> ()) {
     
-    assert(appID != "3918c6163a2cfa8363a792be321f223d", "You need to set your API key!")
+    assert(appID != "", "You need to set your API key!")
     
     let urlString = "http://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(appID)"
     let url = URL(string: urlString)!
